@@ -58,14 +58,14 @@ def render(master_df, profitability_model, format_recommender):
             r=pillar_values + [pillar_values[0]],
             theta=labels + [labels[0]],
             fill="toself", fillcolor="rgba(0,51,153,0.12)",
-            line=dict(color="#003399", width=2),
-            marker=dict(size=6, color="#003399"),
+            line=dict(color="#166534", width=2),
+            marker=dict(size=6, color="#166534"),
         ))
         fig.update_layout(
             polar=dict(radialaxis=dict(visible=True, range=[0, 100], tickfont=dict(size=9)),
                        angularaxis=dict(tickfont=dict(size=11, family="Inter"))),
             showlegend=False, margin=dict(t=30, b=30, l=60, r=60), height=340,
-            paper_bgcolor="#FAFBFE",
+            paper_bgcolor="#F8FBF9",
             font=dict(family="Inter"),
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -124,11 +124,11 @@ def render(master_df, profitability_model, format_recommender):
     years = [f["year"] for f in flows]
     fig2 = go.Figure()
     fig2.add_trace(go.Scatter(x=years, y=[f["fuel_revenue_cr"] for f in flows],
-                              name="Fuel", stackgroup="one", line=dict(width=0), fillcolor="rgba(0,51,153,0.6)"))
+                              name="Fuel", stackgroup="one", line=dict(width=0), fillcolor="rgba(20,83,45,0.6)"))
     fig2.add_trace(go.Scatter(x=years, y=[f["ev_revenue_cr"] for f in flows],
-                              name="EV Charging", stackgroup="one", line=dict(width=0), fillcolor="rgba(5,150,105,0.6)"))
+                              name="EV Charging", stackgroup="one", line=dict(width=0), fillcolor="rgba(22,163,74,0.6)"))
     fig2.add_trace(go.Scatter(x=years, y=[f["retail_revenue_cr"] for f in flows],
-                              name="Retail", stackgroup="one", line=dict(width=0), fillcolor="rgba(255,102,0,0.5)"))
+                              name="Retail", stackgroup="one", line=dict(width=0), fillcolor="rgba(245,158,11,0.5)"))
     fig2.add_trace(go.Scatter(x=years, y=[f["cumulative_cf_cr"] for f in flows],
                               name="Cumulative CF", line=dict(color="#DC2626", width=2, dash="dot"),
                               yaxis="y2"))
@@ -137,7 +137,7 @@ def render(master_df, profitability_model, format_recommender):
         xaxis_title="Year", yaxis_title="Annual Revenue (₹ Cr)",
         yaxis2=dict(title="Cumulative CF (₹ Cr)", overlaying="y", side="right"),
         height=400, margin=dict(t=40, b=40),
-        paper_bgcolor="#FAFBFE", plot_bgcolor="#FAFBFE",
+        paper_bgcolor="#F8FBF9", plot_bgcolor="#F8FBF9",
         font=dict(family="Inter"), legend=dict(orientation="h", yanchor="bottom", y=-0.2),
     )
     st.plotly_chart(fig2, use_container_width=True)
@@ -162,7 +162,7 @@ def render(master_df, profitability_model, format_recommender):
     fig3.update_layout(
         title="Impact of ±20% Change in Each Pillar on Composite Score",
         xaxis_title="Score Change", barmode="relative", height=300,
-        margin=dict(t=40, b=30), paper_bgcolor="#FAFBFE", plot_bgcolor="#FAFBFE",
+        margin=dict(t=40, b=30), paper_bgcolor="#F8FBF9", plot_bgcolor="#F8FBF9",
         font=dict(family="Inter"),
     )
     st.plotly_chart(fig3, use_container_width=True)
