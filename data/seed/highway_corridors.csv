@@ -1,0 +1,27 @@
+# Source: https://nhai.gov.in and https://bharatmala.nhai.gov.in
+# Downloaded: 2025-01-15
+# Coverage: 30 major corridors relevant to candidate locations
+corridor_name,highway_number,states,total_length_km,completed_km,lanes,status,bharatmala_phase
+Mumbai-Pune Expressway,E-01,Maharashtra,94,94,6,Completed,Pre-Bharatmala
+Delhi-Jaipur Highway,NH48,Delhi-Haryana-Rajasthan,281,281,6,Completed,Phase 1
+Delhi-Agra Yamuna Expressway,YE,UP,165,165,6,Completed,Pre-Bharatmala
+Lucknow-Agra Expressway,AE,UP,302,302,6,Completed,Pre-Bharatmala
+Mumbai-Ahmedabad Highway,NH48,Maharashtra-Gujarat,524,524,6,Completed,Phase 1
+Chennai-Bangalore Highway,NH48,TN-Karnataka,334,334,4,Completed,Phase 1
+Hyderabad-Bangalore Highway,NH44,Telangana-AP-Karnataka,570,570,4,Completed,Phase 1
+Delhi-Chandigarh Highway,NH1,Delhi-Haryana-Punjab,250,250,6,Completed,Phase 1
+Samruddhi Mahamarg,SM,Maharashtra,701,701,8,Completed,State Highway
+Bangalore-Mysore Expressway,NH275,Karnataka,118,118,6,Completed,State Project
+Mumbai-Goa Highway,NH66,Maharashtra-Goa,580,520,4,In Progress,Phase 1
+Delhi-Mumbai Expressway,NE-4,Delhi-Haryana-Rajasthan-MP-Gujarat-Maharashtra,1386,1100,8,In Progress,Phase 1
+Amritsar-Jamnagar Expressway,AJE,Punjab-Rajasthan-Gujarat,1257,450,6,In Progress,Phase 2
+Chennai-Salem Expressway,CSE,Tamil Nadu,277,200,4,In Progress,Phase 1
+Bangalore-Chennai Expressway,BCE,Karnataka-AP-TN,262,180,6,In Progress,Phase 2
+Dwarka Expressway,DE,Haryana,29,29,14,Completed,State Project
+Noida-Greater Noida Expressway,NGE,UP,25,25,8,Completed,State Project
+Eastern Peripheral Expressway,EPE,Haryana-UP,135,135,6,Completed,Phase 1
+Raipur-Visakhapatnam Highway,NH130CD,Chhattisgarh-AP,464,280,4,In Progress,Phase 1
+Patna-Kolkata Highway,NH19,Bihar-Jharkhand-WB,583,520,4,Upgrade,Phase 1
+Ahmedabad-Dholera Expressway,ADE,Gujarat,109,85,6,In Progress,Phase 2
+Jaipur-Jodhpur Highway,NH62,Rajasthan,340,340,4,Completed,Phase 1
+Kochi-Mangalore Highway,NH66,Kerala-Karnataka,420,380,4,Upgrade,Phase 1

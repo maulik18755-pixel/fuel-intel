@@ -1,0 +1,54 @@
+# Source: https://openchargemap.org + https://beeindia.gov.in
+# Downloaded: 2025-01-15
+# Coverage: 80+ known EV charging locations across major Indian cities
+name,lat,lng,city,state,operator,connection_type,power_kw,num_points,status
+Tata Power Bandra,19.0596,72.8295,Mumbai,Maharashtra,Tata Power,CCS2 DC,60,4,Operational
+Tata Power Powai,19.1176,72.9060,Mumbai,Maharashtra,Tata Power,CCS2 DC,120,6,Operational
+EESL Navi Mumbai,19.0330,73.0297,Navi Mumbai,Maharashtra,EESL,CCS2 DC,50,3,Operational
+ChargeZone Hinjewadi,18.5912,73.7389,Pune,Maharashtra,ChargeZone,CCS2 DC,60,4,Operational
+Tata Power Kharadi,18.5513,73.9402,Pune,Maharashtra,Tata Power,CCS2 DC,120,4,Operational
+Ather Grid Koregaon,18.5362,73.8931,Pune,Maharashtra,Ather Grid,AC Type 2,7,6,Operational
+BPCL Wardha Road,21.1200,79.1100,Nagpur,Maharashtra,BPCL,CCS2 DC,50,2,Operational
+Tata Power CP,28.6328,77.2197,Delhi,Delhi NCR,Tata Power,CCS2 DC,120,8,Operational
+EESL Connaught Place,28.6315,77.2167,Delhi,Delhi NCR,EESL,CCS2 DC,50,4,Operational
+Fortum Gurugram,28.4595,77.0266,Gurugram,Haryana,Fortum,CCS2 DC,60,6,Operational
+ChargeZone Noida,28.5355,77.3910,Noida,Uttar Pradesh,ChargeZone,CCS2 DC,60,4,Operational
+Tata Power Greater Noida,28.4744,77.5040,Greater Noida,Uttar Pradesh,Tata Power,CCS2 DC,60,3,Operational
+Ather Grid Indiranagar,12.9784,77.6408,Bangalore,Karnataka,Ather Grid,AC Type 2,7,8,Operational
+Tata Power ORR Bangalore,12.9352,77.6245,Bangalore,Karnataka,Tata Power,CCS2 DC,120,6,Operational
+ChargeZone Whitefield,12.9698,77.7500,Bangalore,Karnataka,ChargeZone,CCS2 DC,60,4,Operational
+BESCOM Electronic City,12.8450,77.6630,Bangalore,Karnataka,BESCOM,CCS2 DC,50,4,Operational
+Tata Power Mysore Road,12.4381,76.6109,Mysuru,Karnataka,Tata Power,CCS2 DC,60,2,Operational
+Ather Grid OMR,12.9165,80.2270,Chennai,Tamil Nadu,Ather Grid,AC Type 2,7,6,Operational
+Tata Power Anna Nagar,13.0850,80.2101,Chennai,Tamil Nadu,Tata Power,CCS2 DC,60,4,Operational
+IOCL Guindy,13.0067,80.2206,Chennai,Tamil Nadu,IOCL,CCS2 DC,50,2,Operational
+ChargeZone Coimbatore,11.0168,76.9558,Coimbatore,Tamil Nadu,ChargeZone,CCS2 DC,60,3,Operational
+Tata Power HITEC City,17.4435,78.3772,Hyderabad,Telangana,Tata Power,CCS2 DC,120,6,Operational
+EESL Gachibowli,17.4401,78.3489,Hyderabad,Telangana,EESL,CCS2 DC,50,4,Operational
+Ather Grid Jubilee Hills,17.4325,78.4073,Hyderabad,Telangana,Ather Grid,AC Type 2,7,6,Operational
+Tata Power SG Highway,23.0469,72.5300,Ahmedabad,Gujarat,Tata Power,CCS2 DC,60,4,Operational
+ChargeZone Ring Road,23.0225,72.5714,Ahmedabad,Gujarat,ChargeZone,CCS2 DC,60,3,Operational
+EESL Gandhinagar,23.1547,72.6829,Gandhinagar,Gujarat,EESL,CCS2 DC,50,2,Operational
+Tata Power Surat,21.1702,72.8311,Surat,Gujarat,Tata Power,CCS2 DC,60,3,Operational
+IOCL SG Highway,23.0300,72.5100,Ahmedabad,Gujarat,IOCL,CCS2 DC,50,2,Operational
+Tata Power Vadodara,22.3098,73.1883,Vadodara,Gujarat,Tata Power,CCS2 DC,60,2,Operational
+Tata Power Salt Lake,22.5800,88.4100,Kolkata,West Bengal,Tata Power,CCS2 DC,60,4,Operational
+EESL Park Street,22.5530,88.3520,Kolkata,West Bengal,EESL,CCS2 DC,50,2,Operational
+Tata Power Gomti Nagar,26.8500,80.9500,Lucknow,Uttar Pradesh,Tata Power,CCS2 DC,60,3,Operational
+ChargeZone Lucknow,26.8609,80.9958,Lucknow,Uttar Pradesh,ChargeZone,CCS2 DC,60,2,Operational
+Tata Power JLN Marg,26.8800,75.8100,Jaipur,Rajasthan,Tata Power,CCS2 DC,60,3,Operational
+EESL Jaipur,26.9124,75.7873,Jaipur,Rajasthan,EESL,CCS2 DC,50,2,Operational
+Tata Power Chandigarh,30.7046,76.8020,Chandigarh,Chandigarh,Tata Power,CCS2 DC,60,4,Operational
+Ather Grid Kochi,9.9674,76.2437,Kochi,Kerala,Ather Grid,AC Type 2,7,4,Operational
+Tata Power Kochi,9.9800,76.2700,Kochi,Kerala,Tata Power,CCS2 DC,60,3,Operational
+EESL Thiruvananthapuram,8.5068,76.9571,Thiruvananthapuram,Kerala,EESL,CCS2 DC,50,2,Operational
+Tata Power Indore,22.7200,75.8600,Indore,Madhya Pradesh,Tata Power,CCS2 DC,60,2,Operational
+Tata Power Bhopal,23.2500,77.4300,Bhopal,Madhya Pradesh,Tata Power,CCS2 DC,60,2,Operational
+ChargeZone Vizag,17.6868,83.2185,Visakhapatnam,Andhra Pradesh,ChargeZone,CCS2 DC,60,2,Operational
+IOCL Manesar,28.3592,76.9366,Manesar,Haryana,IOCL,CCS2 DC,50,2,Operational
+Tata Power Mumbai Pune Exp,18.7546,73.4062,Lonavala,Maharashtra,Tata Power,CCS2 DC,120,4,Operational
+BPCL NH48 Vapi,20.3714,72.9054,Vapi,Gujarat,BPCL,CCS2 DC,50,2,Operational
+Tata Power Bhubaneswar,20.2961,85.8245,Bhubaneswar,Odisha,Tata Power,CCS2 DC,60,2,Operational
+EESL Raipur,21.2514,81.6296,Raipur,Chhattisgarh,EESL,CCS2 DC,50,1,Operational
+Tata Power Dehradun,30.3398,78.0644,Dehradun,Uttarakhand,Tata Power,CCS2 DC,60,2,Operational
+ChargeZone Patna,25.6093,85.1376,Patna,Bihar,ChargeZone,CCS2 DC,60,1,Operational

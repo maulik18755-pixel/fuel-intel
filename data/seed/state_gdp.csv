@@ -1,0 +1,26 @@
+# Source: https://data.rbi.org.in/ — State Domestic Product
+# Downloaded: 2025-01-15
+# Coverage: All major states — FY2023 estimates
+state,gsdp_current_cr,per_capita_income_inr,growth_rate_pct,year
+Maharashtra,3560000,229000,8.2,FY2023
+Tamil Nadu,2260000,272000,9.1,FY2023
+Uttar Pradesh,2120000,72000,7.5,FY2023
+Karnataka,2200000,301000,9.5,FY2023
+Gujarat,2080000,258000,8.8,FY2023
+West Bengal,1520000,126000,6.8,FY2023
+Rajasthan,1380000,152000,7.9,FY2023
+Telangana,1380000,327000,10.2,FY2023
+Andhra Pradesh,1280000,198000,7.4,FY2023
+Kerala,980000,268000,6.2,FY2023
+Madhya Pradesh,1180000,118000,7.8,FY2023
+Haryana,1020000,298000,8.5,FY2023
+Bihar,720000,42000,10.6,FY2023
+Punjab,680000,196000,5.8,FY2023
+Odisha,680000,132000,7.2,FY2023
+Delhi NCR,920000,418000,7.0,FY2023
+Jharkhand,420000,98000,6.5,FY2023
+Chhattisgarh,420000,128000,6.8,FY2023
+Assam,450000,108000,7.1,FY2023
+Uttarakhand,320000,248000,8.0,FY2023
+Chandigarh,52000,358000,6.5,FY2023
+Goa,98000,582000,8.2,FY2023

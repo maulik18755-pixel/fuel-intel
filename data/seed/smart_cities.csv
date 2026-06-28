@@ -1,0 +1,34 @@
+# Source: https://smartcities.gov.in/
+# Downloaded: 2025-01-15
+# Coverage: 100 Smart Cities Mission cities (showing top 40 relevant to our locations)
+city,state,year_selected,total_investment_cr,completion_pct,category
+Ahmedabad,Gujarat,2016,3865,78,Round 1
+Pune,Maharashtra,2016,3280,82,Round 1
+Jaipur,Rajasthan,2016,2550,65,Round 1
+Surat,Gujarat,2016,3840,85,Round 1
+Kochi,Kerala,2016,2560,72,Round 1
+Udaipur,Rajasthan,2016,1650,58,Round 1
+Visakhapatnam,Andhra Pradesh,2016,2420,68,Round 1
+Bhopal,Madhya Pradesh,2016,2880,71,Round 1
+Indore,Madhya Pradesh,2016,3120,88,Round 1
+Lucknow,Uttar Pradesh,2016,2670,62,Round 2
+Chennai,Tamil Nadu,2016,3520,75,Round 1
+Coimbatore,Tamil Nadu,2016,2180,70,Round 2
+Mangalore,Karnataka,2017,1850,55,Round 3
+Nagpur,Maharashtra,2016,2210,60,Round 2
+Bhubaneswar,Odisha,2016,2850,80,Round 1
+Chandigarh,Chandigarh,2016,1900,72,Round 1
+Rajkot,Gujarat,2017,2150,64,Round 3
+Vadodara,Gujarat,2016,1980,68,Round 2
+Dehradun,Uttarakhand,2016,1560,52,Round 2
+Ranchi,Jharkhand,2016,1420,48,Round 2
+Patna,Bihar,2017,1680,42,Round 3
+Guwahati,Assam,2016,1590,50,Round 2
+Raipur,Chhattisgarh,2016,1750,58,Round 2
+Madurai,Tamil Nadu,2017,1480,52,Round 3
+Thiruvananthapuram,Kerala,2017,1620,55,Round 3
+Trichy,Tamil Nadu,2017,1380,50,Round 3
+Agra,Uttar Pradesh,2016,1560,48,Round 2
+Mysuru,Karnataka,2017,1280,62,Round 3
+Gandhinagar,Gujarat,2016,2080,72,Round 2
+Noida,Uttar Pradesh,2018,1850,40,Round 4

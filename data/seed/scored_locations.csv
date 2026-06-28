@@ -1,0 +1,57 @@
+# Source: Compiled from Census 2011, Vahan Dashboard, PPAC, OpenChargeMap, RBI State GDP
+# Downloaded: 2025-01-15
+# Coverage: 50 candidate locations across metros, tier-2, tier-3, highways, and emerging corridors
+# Notes: Pillar scores are 0-100. Competition is RAW (high = more competitors = harder market). Inverted during scoring.
+name,lat,lng,state,tier,demand,competition,income,ev_readiness,infrastructure,growth_trajectory
+Mumbai - Western Express Highway,19.076,72.8777,Maharashtra,metro,95,35,92,78,90,70
+Delhi - NH48 Dwarka Expressway,28.5355,77.391,Delhi NCR,metro,98,30,88,85,88,75
+Bangalore - Outer Ring Road East,12.9352,77.6245,Karnataka,metro,90,40,90,82,85,82
+Chennai - Old Mahabalipuram Road,12.9165,80.227,Tamil Nadu,metro,85,45,80,65,82,68
+Hyderabad - Outer Ring Road,17.3616,78.4747,Telangana,metro,88,38,85,72,88,80
+Pune - Hinjewadi IT Park Road,18.5912,73.7389,Maharashtra,metro,82,42,85,70,80,78
+Kolkata - EM Bypass,22.5179,88.3818,West Bengal,metro,80,50,65,45,70,55
+Ahmedabad - SG Highway,23.0469,72.53,Gujarat,metro,85,35,82,60,85,75
+Jaipur - Tonk Road,26.8499,75.8303,Rajasthan,tier2,70,55,65,42,70,65
+Lucknow - Gomti Nagar Extension,26.8609,80.9958,Uttar Pradesh,tier2,72,50,58,35,65,62
+Chandigarh - IT Park Road,30.7046,76.802,Chandigarh,tier2,65,45,78,55,80,60
+Indore - AB Road,22.7147,75.8572,Madhya Pradesh,tier2,68,48,62,38,72,70
+Kochi - NH66 Bypass,9.9674,76.2437,Kerala,tier2,62,55,72,58,75,55
+Coimbatore - Avinashi Road,11.0168,76.9558,Tamil Nadu,tier2,60,50,70,48,72,60
+Nagpur - Wardha Road,21.1458,79.0882,Maharashtra,tier2,58,60,55,32,68,65
+Visakhapatnam - Beach Road,17.6868,83.2185,Andhra Pradesh,tier2,55,58,58,30,65,62
+Surat - Ring Road,21.1702,72.8311,Gujarat,tier2,75,40,78,45,78,72
+Vadodara - NH8 Corridor,22.3098,73.1883,Gujarat,tier2,62,52,68,40,75,60
+Rajkot - Gondal Road,22.2869,70.7937,Gujarat,tier2,55,55,65,30,68,58
+Bhopal - BHEL Area,23.2421,77.432,Madhya Pradesh,tier2,52,58,55,28,65,55
+Thiruvananthapuram - NH66,8.5068,76.9571,Kerala,tier2,48,60,68,52,70,50
+Mysuru - Hunsur Road,12.2958,76.6394,Karnataka,tier2,45,52,62,38,68,55
+Mumbai-Pune Expressway Lonavala,18.7546,73.4062,Maharashtra,highway,80,30,72,55,92,65
+Delhi-Jaipur NH48 Manesar,28.3592,76.9366,Haryana,highway,88,25,80,65,90,78
+Chennai-Bangalore NH48 Vellore,12.9318,79.1325,Tamil Nadu,highway,65,35,55,35,82,60
+Ahmedabad-Mumbai NH48 Vapi,20.3714,72.9054,Gujarat,highway,70,30,60,30,85,65
+Lucknow-Agra Expressway Midpoint,27.2167,79.9,Uttar Pradesh,highway,60,20,45,22,88,58
+Hyderabad-Bangalore NH44 Kurnool,15.8281,78.0373,Andhra Pradesh,highway,50,25,40,20,80,55
+Delhi-Chandigarh NH1 Karnal,29.6857,76.9905,Haryana,highway,62,35,55,35,85,60
+Bangalore-Mysore NH275 Mandya,12.4381,76.6109,Karnataka,highway,55,30,60,45,82,62
+Samruddhi Mahamarg Nashik,20.0112,73.7901,Maharashtra,highway,58,20,55,28,90,68
+Mumbai-Goa NH66 Ratnagiri,16.9902,73.3119,Maharashtra,highway,45,22,48,22,78,52
+Delhi-Agra Yamuna Expressway,27.5,77.7,Uttar Pradesh,highway,72,28,52,30,92,65
+Noida - Sector 62 Tech Zone,28.6237,77.365,Uttar Pradesh,emerging,82,38,82,72,82,85
+Gurugram - Golf Course Extension,28.4346,77.0544,Haryana,emerging,90,32,92,80,85,88
+Navi Mumbai - Panvel Node,18.9894,73.1175,Maharashtra,emerging,75,28,72,60,80,90
+GIFT City Gandhinagar,23.1547,72.6829,Gujarat,emerging,45,15,88,55,90,95
+Amaravati AP Capital Region,16.5062,80.648,Andhra Pradesh,emerging,30,10,45,25,60,92
+Dholera Special Investment Region,22.2475,72.1906,Gujarat,emerging,20,5,50,40,70,95
+Greater Noida Yamuna Expressway,28.4744,77.504,Uttar Pradesh,emerging,55,18,65,58,80,90
+Udaipur - NH8 Junction,24.5854,73.7125,Rajasthan,tier3,42,55,52,22,60,58
+Raipur - NH53 Ring Road,21.2514,81.6296,Chhattisgarh,tier3,48,50,48,18,62,55
+Guwahati - GS Road,26.1432,91.7362,Assam,tier3,45,55,45,15,55,52
+Bhubaneswar - NH16,20.2961,85.8245,Odisha,tier3,50,48,50,25,65,60
+Dehradun - Mussoorie Road,30.3398,78.0644,Uttarakhand,tier3,40,55,55,22,58,50
+Patna - Bailey Road,25.6093,85.1376,Bihar,tier3,55,48,38,12,50,52
+Ranchi - Main Road,23.3441,85.3096,Jharkhand,tier3,42,52,40,10,52,48
+Madurai - NH45B,9.9252,78.1198,Tamil Nadu,tier3,45,52,52,20,62,45
+Jodhpur - Pali Road,26.2389,73.0243,Rajasthan,tier3,38,58,48,15,58,45
+Mangalore - NH75,12.8654,74.8426,Karnataka,tier3,42,50,58,30,65,48
+Trichy - NH45,10.7905,78.7047,Tamil Nadu,tier3,40,52,50,18,60,50
+Agra - NH19 Bypass,27.1767,78.0081,Uttar Pradesh,tier3,52,48,42,15,65,55
