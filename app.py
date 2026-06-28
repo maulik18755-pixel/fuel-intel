@@ -20,22 +20,20 @@ st.set_page_config(
 st.markdown(BRAND_CSS, unsafe_allow_html=True)
 
 
-# ── Cached initialization ────────────────────────────────────────────────────
-@st.cache_resource
-def init_registry():
-    return DataSourceRegistry()
-
-
-@st.cache_data(ttl=3600)
-def load_data(_registry):
-    pipeline = DataPipeline(_registry)
+# ── Initialize data (session_state resets on each deploy) ─────────────────────
+if "master_df" not in st.session_state:
+    registry = DataSourceRegistry()
+    pipeline = DataPipeline(registry)
     all_data = pipeline.load_all()
     master_df = pipeline.build_master_table()
-    return pipeline, all_data, master_df
+    st.session_state["registry"] = registry
+    st.session_state["pipeline"] = pipeline
+    st.session_state["all_data"] = all_data
+    st.session_state["master_df"] = master_df
 
-
-registry = init_registry()
-pipeline, all_data, master_df = load_data(registry)
+registry = st.session_state["registry"]
+pipeline = st.session_state["pipeline"]
+master_df = st.session_state["master_df"]
 scoring_engine = ScoringEngine()
 format_recommender = FormatRecommender()
 profitability_model = ProfitabilityModel()
