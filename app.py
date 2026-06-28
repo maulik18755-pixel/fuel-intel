@@ -50,6 +50,7 @@ with st.sidebar:
             "📊 Executive Summary",
             "🗺️ Location Heat Map",
             "🔍 Location Deep Dive",
+            "🌐 Network Planner",
             "⚖️ Scenario Comparison",
             "📐 Investment Matrix",
             "🏗️ Architecture & Data",
@@ -58,9 +59,9 @@ with st.sidebar:
         label_visibility="collapsed",
     )
     st.divider()
-    st.caption(f"Locations: {len(master_df)}")
+    st.caption(f"Candidates: {len(master_df)}")
     st.caption(f"Data Sources: {len(registry.sources)} active")
-    st.caption("v1.1.0 · Integrated Downstream Company")
+    st.caption("v2.0.0 · Integrated Downstream Company")
 
 
 # ── Page routing ─────────────────────────────────────────────────────────────
@@ -75,6 +76,10 @@ elif page == "🗺️ Location Heat Map":
 elif page == "🔍 Location Deep Dive":
     from ui.pages.location_deep_dive import render
     render(master_df, profitability_model, format_recommender)
+
+elif page == "🌐 Network Planner":
+    from ui.pages.network_planner import render
+    render(master_df)
 
 elif page == "⚖️ Scenario Comparison":
     from ui.pages.scenario_comparison import render

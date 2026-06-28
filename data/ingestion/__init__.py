@@ -1,13 +1,15 @@
 """
-Data Pipeline — loads all seed/uploaded data, enriches locations, runs scoring.
+Data Pipeline — loads data, generates candidates, auto-scores, runs format+profitability.
 """
 import os
 import pandas as pd
 from datetime import datetime
 from data.registry import DataSourceRegistry
-from core.scoring_engine import ScoringEngine, load_locations_from_csv
+from core.scoring_engine import ScoringEngine
 from core.format_recommender import FormatRecommender
 from core.profitability_model import ProfitabilityModel
+from core.auto_scorer import AutoScorer
+from core.candidate_generator import CandidateGenerator
 from config.settings import Settings
 
 BASE_SEED_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "seed")
@@ -74,56 +76,35 @@ class DataPipeline:
         except Exception as e:
             return False, f"Error parsing file: {e}", pd.DataFrame()
 
-    def build_master_table(self):
-        locations = load_locations_from_csv(os.path.join(BASE_SEED_DIR, "scored_locations.csv"))
-        vahan = self.data.get("VAHAN_VEHICLES", pd.DataFrame())
-        gdp = self.data.get("RBI_STATE_GDP", pd.DataFrame())
-        outlets = self.data.get("PPAC_OUTLETS", pd.DataFrame())
-        smart = self.data.get("SMART_CITIES", pd.DataFrame())
-        ev_stations = self.data.get("OPENCHARGE_MAP", pd.DataFrame())
+    def build_master_table(self) -> pd.DataFrame:
+        """
+        Generate candidates → auto-score from data → format → profitability.
+        This replaces the old approach of reading manually-scored locations.
+        """
+        # Step 1: Generate candidate locations from district data + highways
+        generator = CandidateGenerator()
+        census = self.data.get("CENSUS_2011", pd.DataFrame())
+        candidates = generator.generate_all(census)
 
-        for loc in locations:
-            state = loc.get("state", "")
-            state_key = state.split()[0] if state else ""
+        # Step 2: Auto-score from actual data
+        scorer = AutoScorer(
+            state_vehicles=self.data.get("VAHAN_VEHICLES", pd.DataFrame()),
+            state_gdp=self.data.get("RBI_STATE_GDP", pd.DataFrame()),
+            state_outlets=self.data.get("PPAC_OUTLETS", pd.DataFrame()),
+            state_consumption=self.data.get("PPAC_CONSUMPTION", pd.DataFrame()),
+            census=census,
+            ev_stations=self.data.get("OPENCHARGE_MAP", pd.DataFrame()),
+            smart_cities=self.data.get("SMART_CITIES", pd.DataFrame()),
+            highways=self.data.get("NHAI_HIGHWAYS", pd.DataFrame()),
+        )
+        scored_candidates = scorer.score_candidates(candidates)
 
-            if not vahan.empty and "state" in vahan.columns:
-                row = vahan[vahan["state"].str.contains(state_key, case=False, na=False)]
-                if not row.empty:
-                    r = row.iloc[0]
-                    loc["total_vehicles"] = int(r.get("total_vehicles", 0))
-                    loc["ev_registered"] = int(r.get("ev_registered", 0))
-                    loc["ev_share_pct"] = float(r.get("ev_share_pct", 0))
-
-            if not gdp.empty and "state" in gdp.columns:
-                row = gdp[gdp["state"].str.contains(state_key, case=False, na=False)]
-                if not row.empty:
-                    loc["per_capita_income"] = int(row.iloc[0].get("per_capita_income_inr", 0))
-
-            if not outlets.empty and "state" in outlets.columns:
-                row = outlets[outlets["state"].str.contains(state_key, case=False, na=False)]
-                if not row.empty:
-                    loc["total_fuel_outlets"] = int(row.iloc[0].get("total_outlets", 0))
-                    loc["outlets_per_lakh"] = float(row.iloc[0].get("outlets_per_lakh", 0))
-
-            loc["smart_city"] = False
-            if not smart.empty and "city" in smart.columns:
-                nm = loc.get("name", "").lower()
-                for _, sc in smart.iterrows():
-                    if str(sc.get("city", "")).lower() in nm:
-                        loc["smart_city"] = True
-                        break
-
-            loc["nearby_ev_chargers"] = 0
-            if not ev_stations.empty and "lat" in ev_stations.columns:
-                lat, lng = float(loc.get("lat", 0)), float(loc.get("lng", 0))
-                for _, ev in ev_stations.iterrows():
-                    dlat = abs(float(ev.get("lat", 0)) - lat)
-                    dlng = abs(float(ev.get("lng", 0)) - lng)
-                    if dlat < 0.25 and dlng < 0.25:
-                        loc["nearby_ev_chargers"] += int(ev.get("num_points", 1))
-
+        # Step 3: Compute composite score using the scoring engine
         engine = ScoringEngine()
+        locations = scored_candidates.to_dict("records")
         scored_df = engine.score_batch(locations)
+
+        # Step 4: Format recommendation + profitability for each
         recommender = FormatRecommender()
         profitability = ProfitabilityModel()
 

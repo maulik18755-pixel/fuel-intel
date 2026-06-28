@@ -46,7 +46,7 @@ def test_master_table_non_empty():
     pipeline = DataPipeline()
     pipeline.load_all()
     master = pipeline.build_master_table()
-    assert len(master) > 40, f"Expected 40+ locations, got {len(master)}"
+    assert len(master) > 100, f"Expected 100+ locations from candidate generator, got {len(master)}"
 
 
 def test_upload_missing_column_fails():
