@@ -62,7 +62,7 @@ def render(master_df, scoring_engine):
     fig.update_layout(
         xaxis_title="Base Case Score", yaxis_title=f"{scenario_name} Score",
         height=480, margin=dict(t=20, b=40),
-        paper_bgcolor="#F8FBF9", plot_bgcolor="#F8FBF9",
+        paper_bgcolor="#FAFDF9", plot_bgcolor="#FAFDF9",
         font=dict(family="Inter"),
     )
     st.plotly_chart(fig, use_container_width=True)

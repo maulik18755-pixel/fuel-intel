@@ -67,9 +67,9 @@ def render(master_df, registry):
     with c1:
         st.subheader("Recommended Format Mix")
         fmt_counts = master_df["format_name"].value_counts()
-        colors = {"Large Highway Hub": "#14532D", "Urban Full-Service": "#166534",
-                  "EV-Focused Station": "#16A34A", "Compact Urban": "#F59E0B",
-                  "Hybrid Transition": "#65A30D"}
+        colors = {"Large Highway Hub": "#1B5E3B", "Urban Full-Service": "#1B7A42",
+                  "EV-Focused Station": "#22C55E", "Compact Urban": "#F59E0B",
+                  "Hybrid Transition": "#4CAF50"}
         fig = go.Figure(data=[go.Pie(
             labels=fmt_counts.index, values=fmt_counts.values,
             hole=0.55, marker_colors=[colors.get(l, "#999") for l in fmt_counts.index],
@@ -77,7 +77,7 @@ def render(master_df, registry):
             textfont=dict(size=11, family="Inter"),
         )])
         fig.update_layout(showlegend=False, margin=dict(t=10, b=10, l=10, r=10),
-                          paper_bgcolor="#F8FBF9", plot_bgcolor="#F8FBF9", height=320,
+                          paper_bgcolor="#FAFDF9", plot_bgcolor="#FAFDF9", height=320,
                           font=dict(family="Inter"))
         st.plotly_chart(fig, use_container_width=True)
 
@@ -110,13 +110,13 @@ def render(master_df, registry):
 
     fig2 = go.Figure(data=[go.Bar(
         y=state_scores.index, x=state_scores["count"], orientation="h",
-        marker_color="#16A34A", text=state_scores["count"], textposition="outside",
+        marker_color="#22C55E", text=state_scores["count"], textposition="outside",
         textfont=dict(size=12, family="Inter"),
     )])
     fig2.update_layout(
         xaxis_title="Number of Viable Locations",
         yaxis_title="", height=380, margin=dict(l=10, r=40, t=10, b=40),
-        paper_bgcolor="#F8FBF9", plot_bgcolor="#F8FBF9",
+        paper_bgcolor="#FAFDF9", plot_bgcolor="#FAFDF9",
         font=dict(family="Inter", size=12),
     )
     st.plotly_chart(fig2, use_container_width=True)

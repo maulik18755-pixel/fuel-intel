@@ -1,5 +1,5 @@
 """
-Reliance Fuel & EV Location Intelligence Platform
+Fuel & EV Location Intelligence Platform
 Main Streamlit entry point.
 """
 import streamlit as st
@@ -12,7 +12,7 @@ from core.profitability_model import ProfitabilityModel
 from config.settings import Settings
 
 st.set_page_config(
-    page_title="Location Intelligence | Reliance Retail",
+    page_title="Fuel & EV Location Intelligence",
     page_icon="⛽",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -60,7 +60,7 @@ with st.sidebar:
     st.divider()
     st.caption(f"Locations: {len(master_df)}")
     st.caption(f"Data Sources: {len(registry.sources)} active")
-    st.caption("v1.0.0 · Built for Reliance Retail")
+    st.caption("v1.1.0 · Integrated Downstream Company")
 
 
 # ── Page routing ─────────────────────────────────────────────────────────────

@@ -73,7 +73,7 @@ class DataSourceRegistry:
             data_format="Excel/PDF", update_frequency="Annual", last_available_period="FY2024",
             coverage="All India — State Level by Oil Company",
             description="Count of fuel retail outlets by state and oil marketing company (IOCL, BPCL, HPCL, private). Used to compute competition density scores.",
-            columns_used=["state", "total_outlets", "iocl", "bpcl", "hpcl", "reliance", "nayara", "shell", "outlets_per_lakh"],
+            columns_used=["state", "total_outlets", "iocl", "bpcl", "hpcl", "private", "nayara", "shell", "outlets_per_lakh"],
             upload_instructions="Download from PPAC annual report or ready reckoner. Save the retail outlet table as CSV.",
             seed_file="fuel_stations_by_state.csv")
 

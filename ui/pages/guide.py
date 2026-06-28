@@ -5,7 +5,7 @@ import pandas as pd
 
 UPLOAD_SOURCES = {
     "VAHAN_VEHICLES": {"label": "Vehicle Registrations (Vahan)", "template_cols": "state,total_vehicles,two_wheelers,cars,commercial,three_wheelers,ev_registered,ev_share_pct,data_period"},
-    "PPAC_OUTLETS": {"label": "Fuel Stations (PPAC)", "template_cols": "state,total_outlets,iocl,bpcl,hpcl,reliance,nayara,shell,others,outlets_per_lakh"},
+    "PPAC_OUTLETS": {"label": "Fuel Stations (PPAC)", "template_cols": "state,total_outlets,iocl,bpcl,hpcl,private,nayara,shell,others,outlets_per_lakh"},
     "PPAC_CONSUMPTION": {"label": "Fuel Consumption (PPAC)", "template_cols": "state,ms_consumption_tmt,hsd_consumption_tmt,total_petroleum_tmt,data_period"},
     "CENSUS_2011": {"label": "Census / Population Data", "template_cols": "state,district,total_population,urban_population,area_sq_km,population_density,urban_pct,literacy_rate"},
     "RBI_STATE_GDP": {"label": "State GDP (RBI)", "template_cols": "state,gsdp_current_cr,per_capita_income_inr,growth_rate_pct,year"},
@@ -67,7 +67,7 @@ def render(registry, pipeline=None):
         4. Save as CSV with required columns
         5. Upload below
 
-        **Required columns:** state, total_outlets, iocl, bpcl, hpcl, reliance, outlets_per_lakh
+        **Required columns:** state, total_outlets, iocl, bpcl, hpcl, private, outlets_per_lakh
         """)
 
     with st.expander("🔋 EV Charging Stations — Auto-refreshes via API"):

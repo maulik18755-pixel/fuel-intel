@@ -1,4 +1,4 @@
-# FUEL-INTEL — Reliance Fuel & EV Location Intelligence Platform
+# FUEL-INTEL — Fuel & EV Location Intelligence Platform
 
 ## Project Overview
 A CEO-grade decision-support dashboard for identifying optimal locations for fuel retail and EV supercharger stations across India. Built with Streamlit, deployed to Streamlit Community Cloud.
@@ -46,7 +46,7 @@ Priority order (first match wins):
 - Every metric MUST have context: what it means, whether it's good/bad, and what action to take.
 - Every chart MUST have: a title, axis labels, and a one-line insight caption below it.
 - Executive Summary loads first. Always. It's the landing page.
-- Reliance brand palette: primary #003399 (deep blue), accent #FF6600 (orange), success #059669 (green), warning #D97706 (amber), danger #DC2626 (red), background #FAFBFE, text #1A1A2E.
+- Green energy palette: primary #1B5E3B, accent #22C55E, success #16A34A, warning #F59E0B, danger #DC2626, background #FAFDF9, text #1E293B.
 - Font: Inter (imported from Google Fonts via CSS).
 - White space is a feature. Never cram. Use st.columns with spacing.
 - No Streamlit default hamburger menu or footer. Hide with CSS.

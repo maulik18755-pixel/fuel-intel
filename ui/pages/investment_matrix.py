@@ -5,8 +5,8 @@ from utils.formatters import format_inr_cr
 
 
 FORMAT_COLORS = {
-    "large_highway_hub": "#14532D", "urban_full_service": "#166534",
-    "ev_focused_station": "#16A34A", "compact_urban": "#F59E0B", "hybrid_transition": "#65A30D",
+    "large_highway_hub": "#1B5E3B", "urban_full_service": "#1B7A42",
+    "ev_focused_station": "#22C55E", "compact_urban": "#F59E0B", "hybrid_transition": "#4CAF50",
 }
 
 
@@ -41,7 +41,7 @@ def render(master_df):
     df["quadrant"] = df.apply(assign_quadrant, axis=1)
 
     quad_colors = {"FAST TRACK": "#059669", "SELECTIVE INVEST": "#D97706",
-                   "STRATEGIC HOLD": "#166534", "DEPRIORITIZE": "#9CA3AF"}
+                   "STRATEGIC HOLD": "#1B7A42", "DEPRIORITIZE": "#9CA3AF"}
 
     fig = go.Figure()
 
@@ -53,14 +53,14 @@ def render(master_df):
     fig.add_shape(type="rect", x0=x_range[0], x1=x_mid, y0=y_mid, y1=y_range[1],
                   fillcolor="rgba(217,119,6,0.06)", line=dict(width=0))
     fig.add_shape(type="rect", x0=x_mid, x1=x_range[1], y0=y_range[0], y1=y_mid,
-                  fillcolor="rgba(22,101,52,0.06)", line=dict(width=0))
+                  fillcolor="rgba(27,122,66,0.06)", line=dict(width=0))
     fig.add_shape(type="rect", x0=x_range[0], x1=x_mid, y0=y_range[0], y1=y_mid,
                   fillcolor="rgba(156,163,175,0.06)", line=dict(width=0))
 
     # Quadrant labels
     fig.add_annotation(x=x_range[1]-2, y=y_range[1]-0.5, text="FAST TRACK", font=dict(size=12, color="#059669", family="Inter"), showarrow=False)
     fig.add_annotation(x=x_range[0]+5, y=y_range[1]-0.5, text="SELECTIVE INVEST", font=dict(size=12, color="#D97706", family="Inter"), showarrow=False)
-    fig.add_annotation(x=x_range[1]-2, y=y_range[0]+0.5, text="STRATEGIC HOLD", font=dict(size=12, color="#166534", family="Inter"), showarrow=False)
+    fig.add_annotation(x=x_range[1]-2, y=y_range[0]+0.5, text="STRATEGIC HOLD", font=dict(size=12, color="#1B7A42", family="Inter"), showarrow=False)
     fig.add_annotation(x=x_range[0]+5, y=y_range[0]+0.5, text="DEPRIORITIZE", font=dict(size=12, color="#9CA3AF", family="Inter"), showarrow=False)
 
     for _, row in df.iterrows():
@@ -83,7 +83,7 @@ def render(master_df):
     fig.update_layout(
         xaxis_title=x_label, yaxis_title=y_label,
         height=520, margin=dict(t=20, b=50, l=50, r=20),
-        paper_bgcolor="#F8FBF9", plot_bgcolor="#F8FBF9",
+        paper_bgcolor="#FAFDF9", plot_bgcolor="#FAFDF9",
         font=dict(family="Inter"),
     )
     st.plotly_chart(fig, use_container_width=True)

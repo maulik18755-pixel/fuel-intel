@@ -1,7 +1,7 @@
 # Source: https://ppac.gov.in/ — Retail Outlet Data
 # Downloaded: 2025-01-15
 # Coverage: All India — State Level by Oil Company (FY2024)
-state,total_outlets,iocl,bpcl,hpcl,reliance,nayara,shell,others,outlets_per_lakh
+state,total_outlets,iocl,bpcl,hpcl,private,nayara,shell,others,outlets_per_lakh
 Maharashtra,15850,5200,3800,3100,1200,1100,450,1000,3.8
 Uttar Pradesh,14200,5800,3200,3000,800,600,200,600,4.0
 Tamil Nadu,10800,3900,2800,2200,600,500,300,500,3.7
